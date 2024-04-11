@@ -15,7 +15,7 @@ INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
 WHERE
     job_title_short = 'Data Analyst'
     AND salary_year_avg IS NOT NULL
-    AND job_work_from_home = True 
+    AND search_location = 'Canada' 
 GROUP BY
     skills
 ORDER BY
@@ -24,103 +24,103 @@ LIMIT 25;
 
 [
   {
-    "skills": "pyspark",
-    "avg_salary": "208172"
+    "skills": "looker",
+    "avg_salary": "130250"
   },
   {
-    "skills": "bitbucket",
-    "avg_salary": "189155"
+    "skills": "snowflake",
+    "avg_salary": "123333"
   },
   {
-    "skills": "couchbase",
-    "avg_salary": "160515"
+    "skills": "redshift",
+    "avg_salary": "120000"
   },
   {
-    "skills": "watson",
-    "avg_salary": "160515"
+    "skills": "typescript",
+    "avg_salary": "108416"
   },
   {
-    "skills": "datarobot",
-    "avg_salary": "155486"
+    "skills": "bigquery",
+    "avg_salary": "107833"
   },
   {
-    "skills": "gitlab",
-    "avg_salary": "154500"
+    "skills": "spark",
+    "avg_salary": "107479"
   },
   {
-    "skills": "swift",
-    "avg_salary": "153750"
+    "skills": "hadoop",
+    "avg_salary": "107167"
   },
   {
-    "skills": "jupyter",
-    "avg_salary": "152777"
-  },
-  {
-    "skills": "pandas",
-    "avg_salary": "151821"
-  },
-  {
-    "skills": "elasticsearch",
-    "avg_salary": "145000"
-  },
-  {
-    "skills": "golang",
-    "avg_salary": "145000"
-  },
-  {
-    "skills": "numpy",
-    "avg_salary": "143513"
-  },
-  {
-    "skills": "databricks",
-    "avg_salary": "141907"
-  },
-  {
-    "skills": "linux",
-    "avg_salary": "136508"
-  },
-  {
-    "skills": "kubernetes",
-    "avg_salary": "132500"
-  },
-  {
-    "skills": "atlassian",
-    "avg_salary": "131162"
-  },
-  {
-    "skills": "twilio",
-    "avg_salary": "127000"
-  },
-  {
-    "skills": "airflow",
-    "avg_salary": "126103"
-  },
-  {
-    "skills": "scikit-learn",
-    "avg_salary": "125781"
-  },
-  {
-    "skills": "jenkins",
-    "avg_salary": "125436"
-  },
-  {
-    "skills": "notion",
-    "avg_salary": "125000"
-  },
-  {
-    "skills": "scala",
-    "avg_salary": "124903"
-  },
-  {
-    "skills": "postgresql",
-    "avg_salary": "123879"
+    "skills": "aws",
+    "avg_salary": "105000"
   },
   {
     "skills": "gcp",
-    "avg_salary": "122500"
+    "avg_salary": "105000"
   },
   {
-    "skills": "microstrategy",
-    "avg_salary": "121619"
+    "skills": "azure",
+    "avg_salary": "103671"
+  },
+  {
+    "skills": "javascript",
+    "avg_salary": "101750"
+  },
+  {
+    "skills": "databricks",
+    "avg_salary": "101014"
+  },
+  {
+    "skills": "sheets",
+    "avg_salary": "100625"
+  },
+  {
+    "skills": "visio",
+    "avg_salary": "100500"
+  },
+  {
+    "skills": "jira",
+    "avg_salary": "100500"
+  },
+  {
+    "skills": "express",
+    "avg_salary": "99150"
+  },
+  {
+    "skills": "sap",
+    "avg_salary": "99150"
+  },
+  {
+    "skills": "r",
+    "avg_salary": "98500"
+  },
+  {
+    "skills": "tableau",
+    "avg_salary": "95315"
+  },
+  {
+    "skills": "python",
+    "avg_salary": "92494"
+  },
+  {
+    "skills": "power bi",
+    "avg_salary": "92100"
+  },
+  {
+    "skills": "sql",
+    "avg_salary": "91092"
+  },
+  {
+    "skills": "sql server",
+    "avg_salary": "90000"
+  },
+  {
+    "skills": "sas",
+    "avg_salary": "88750"
+  },
+  {
+    "skills": "vba",
+    "avg_salary": "83875"
   }
 ]

@@ -18,7 +18,190 @@ FROM
     job_postings_fact as jpf
 LEFT JOIN company_dim as cd on jpf.company_id=cd.company_id
 where salary_year_avg IS NOT NULL and 
-      job_title_short like 'Data Analyst' and
-      job_location like 'Anywhere'
+      job_title_short like '%Data%Analyst%' and
+      search_location = 'Canada'
 order by salary_year_avg desc
 limit 20
+
+[
+  {
+    "job_id": 537346,
+    "job_title": "Analytics Engineering Manager",
+    "job_location": "Vancouver, BC, Canada",
+    "job_schedule_type": "Full-time",
+    "salary_year_avg": "175000.0",
+    "job_posted_date": "2023-01-17 06:17:13",
+    "company_name": "Rec Room"
+  },
+  {
+    "job_id": 475626,
+    "job_title": "Principal Data Analyst",
+    "job_location": "Anywhere",
+    "job_schedule_type": "Full-time",
+    "salary_year_avg": "160000.0",
+    "job_posted_date": "2023-02-02 14:16:03",
+    "company_name": "Realtime Recruitment"
+  },
+  {
+    "job_id": 1507104,
+    "job_title": "Sr. DataOps Analyst",
+    "job_location": "Toronto, ON, Canada",
+    "job_schedule_type": "Full-time",
+    "salary_year_avg": "125000.0",
+    "job_posted_date": "2023-03-15 07:16:26",
+    "company_name": "Autodesk, Inc"
+  },
+  {
+    "job_id": 889532,
+    "job_title": "Data & Analytics - Senior Analytics Engineer",
+    "job_location": "Canada",
+    "job_schedule_type": "Full-time",
+    "salary_year_avg": "120000.0",
+    "job_posted_date": "2023-12-08 13:12:03",
+    "company_name": "Aritzia"
+  },
+  {
+    "job_id": 587198,
+    "job_title": "Data Architect",
+    "job_location": "Anywhere",
+    "job_schedule_type": "Full-time",
+    "salary_year_avg": "120000.0",
+    "job_posted_date": "2023-07-18 06:35:18",
+    "company_name": "Motion Recruitment"
+  },
+  {
+    "job_id": 1209183,
+    "job_title": "Senior Data Analyst, Insights Reporting",
+    "job_location": "Montreal, QC, Canada",
+    "job_schedule_type": "Full-time",
+    "salary_year_avg": "111175.0",
+    "job_posted_date": "2023-08-01 09:19:05",
+    "company_name": "SSENSE"
+  },
+  {
+    "job_id": 1180796,
+    "job_title": "Data Analyst, Growth",
+    "job_location": "Canada",
+    "job_schedule_type": "Full-time",
+    "salary_year_avg": "111175.0",
+    "job_posted_date": "2023-04-12 18:31:14",
+    "company_name": "Stripe"
+  },
+  {
+    "job_id": 668687,
+    "job_title": "Senior Data Analyst - Gaming Social Media Growth",
+    "job_location": "Canada",
+    "job_schedule_type": "Full-time",
+    "salary_year_avg": "111175.0",
+    "job_posted_date": "2023-07-06 15:10:17",
+    "company_name": "HoYoverse"
+  },
+  {
+    "job_id": 205303,
+    "job_title": "Data Analyst, Risk User Experience",
+    "job_location": "Canada",
+    "job_schedule_type": "Full-time",
+    "salary_year_avg": "111175.0",
+    "job_posted_date": "2023-09-04 07:16:18",
+    "company_name": "Stripe"
+  },
+  {
+    "job_id": 89763,
+    "job_title": "Senior Data Analyst",
+    "job_location": "Canada",
+    "job_schedule_type": "Full-time",
+    "salary_year_avg": "111175.0",
+    "job_posted_date": "2023-07-21 01:13:31",
+    "company_name": "Kinaxis"
+  },
+  {
+    "job_id": 409209,
+    "job_title": "Data Analyst (VBA, Tableau)",
+    "job_location": "Canada",
+    "job_schedule_type": "Full-time",
+    "salary_year_avg": "109000.0",
+    "job_posted_date": "2023-11-09 19:11:57",
+    "company_name": "Sun Life"
+  },
+  {
+    "job_id": 629221,
+    "job_title": "Analytics Engineering Lead",
+    "job_location": "Canada",
+    "job_schedule_type": "Full-time",
+    "salary_year_avg": "108415.5",
+    "job_posted_date": "2023-11-27 11:52:42",
+    "company_name": "Swiss Re"
+  },
+  {
+    "job_id": 1591043,
+    "job_title": "Data Analyst, End to End Banking Operations",
+    "job_location": "Edmonton, AB, Canada",
+    "job_schedule_type": "Full-time",
+    "salary_year_avg": "105000.0",
+    "job_posted_date": "2023-06-30 06:13:33",
+    "company_name": "ATB Financial"
+  },
+  {
+    "job_id": 827579,
+    "job_title": "Data Analyst - Game Operations",
+    "job_location": "Canada",
+    "job_schedule_type": "Full-time",
+    "salary_year_avg": "105000.0",
+    "job_posted_date": "2023-07-06 14:10:17",
+    "company_name": "HoYoverse"
+  },
+  {
+    "job_id": 1232872,
+    "job_title": "Analytics Lab Architect",
+    "job_location": "Canada",
+    "job_schedule_type": "Full-time",
+    "salary_year_avg": "101014.0",
+    "job_posted_date": "2023-12-24 08:20:10",
+    "company_name": "Swiss Re"
+  },
+  {
+    "job_id": 973984,
+    "job_title": "Data Analyst - HoYolab and Content Creator",
+    "job_location": "Canada",
+    "job_schedule_type": "Full-time",
+    "salary_year_avg": "100500.0",
+    "job_posted_date": "2023-07-05 22:11:52",
+    "company_name": "HoYoverse"
+  },
+  {
+    "job_id": 995289,
+    "job_title": "Operation Data Analyst - Genshin Impact",
+    "job_location": "Canada",
+    "job_schedule_type": "Full-time",
+    "salary_year_avg": "100500.0",
+    "job_posted_date": "2023-07-06 01:11:52",
+    "company_name": "HoYoverse"
+  },
+  {
+    "job_id": 452146,
+    "job_title": "Data Analyst",
+    "job_location": "Edmonton, AB, Canada",
+    "job_schedule_type": "Full-time",
+    "salary_year_avg": "100500.0",
+    "job_posted_date": "2023-05-31 12:15:15",
+    "company_name": "ATB Financial"
+  },
+  {
+    "job_id": 1201997,
+    "job_title": "Data Strategy Product Manager",
+    "job_location": "Canada",
+    "job_schedule_type": "Full-time",
+    "salary_year_avg": "99150.0",
+    "job_posted_date": "2023-01-24 10:18:13",
+    "company_name": "Kinaxis"
+  },
+  {
+    "job_id": 927960,
+    "job_title": "Instructor - Data Analytics Program",
+    "job_location": "Calgary, AB, Canada",
+    "job_schedule_type": "Full-time",
+    "salary_year_avg": "99150.0",
+    "job_posted_date": "2023-02-07 14:16:55",
+    "company_name": "SAIT"
+  }
+]
