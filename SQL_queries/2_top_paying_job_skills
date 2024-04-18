@@ -6,28 +6,30 @@ Question: What skills are required for the top-paying data analyst jobs?
     helping job seekers understand which skills to develop that align with top salaries
 */
 
-with top_paying_jobs as (
-    SELECT	
-        job_id,
-        job_title,
-        salary_year_avg,
-        name as company_name
-    FROM
-        job_postings_fact as jpf
-    LEFT JOIN company_dim as cd on jpf.company_id=cd.company_id
-    where salary_year_avg IS NOT NULL and 
-        job_title_short like 'Data Analyst' and
-        search_location like 'Canada'
+create view top_paying_skills as (
+    with top_paying_jobs as (
+        SELECT	
+            job_id,
+            job_title,
+            salary_year_avg,
+            name as company_name
+        FROM
+            job_postings_fact as jpf
+        LEFT JOIN company_dim as cd on jpf.company_id=cd.company_id
+        where salary_year_avg IS NOT NULL and 
+            job_title_short like 'Data Analyst' and
+            search_location like 'Canada'
+        order by salary_year_avg desc
+        limit 20
+    )
+    
+    select top_paying_jobs.*,
+            skills
+    from top_paying_jobs
+    inner join skills_job_dim on top_paying_jobs.job_id=skills_job_dim.job_id
+    inner join skills_dim on skills_job_dim.skill_id=skills_dim.skill_id
     order by salary_year_avg desc
-    limit 20
 )
-
-select top_paying_jobs.*,
-        skills
-from top_paying_jobs
-inner join skills_job_dim on top_paying_jobs.job_id=skills_job_dim.job_id
-inner join skills_dim on skills_job_dim.skill_id=skills_dim.skill_id
-order by salary_year_avg desc
 
 /*
 SQL and Python are the most frequently mentioned skills, indicating their importance in the data analytics field.
