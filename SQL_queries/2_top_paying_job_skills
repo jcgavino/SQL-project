@@ -36,16 +36,17 @@ SQL and Python are the most frequently mentioned skills, indicating their import
 Visualization tools like Tableau and Excel are also highly sought after, with Tableau being mentioned slightly more frequently.
 Big data technologies such as Spark and Hadoop, along with cloud platforms like Azure and AWS, are also in demand, reflecting the industry's focus on handling large volumes of data efficiently.
 
-SQL: 20
-Python: 16
-Tableau: 11
-Excel: 9
+SQL: 12
+Python: 10
+Tableau: 8
 SAS: 6
-Spark: 6
-Hadoop: 4
-Power BI: 3
+Excel: 5
+Sheets: 4
+Spark: 4
+Azure: 3
+BigQuery: 3
+Hadoop: 3
 Snowflake: 3
-AWS: 3
 */
 
 [
