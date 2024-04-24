@@ -11,8 +11,14 @@ Some questions that SQL queries will be able to answer are:
 4. Which skills are associated with higher salaries?
 5. What are the most optimal skills to learn?
 
-Utilizing both SQL and PowerBI, we get to exploring and learning about the Canadian job market for the data industry.
-
+## Tools
+I used several tools to explore the dataset.
+  - SQL - formulated and explored queries to get insights from the data
+  - PostgreSQL - database to handle various tasks with regards to the dataset such as uploading, querying, and creating tables 
+  - Vscode - tool where to query and manage the database
+  - PowerBI - connected to PostgreSQL to view the tables and create simple charts
+  - Git and Github - to share my repository 
+  
 ## Analysis
 
 ## Learnings
