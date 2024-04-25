@@ -20,8 +20,9 @@ I used several tools to explore the dataset.
   - Git and Github - to share my repository 
   
 ## Analysis
-Query # 1 : Top-Paying Jobs
+### Query # 1 : Top-Paying Jobs
 
+```sql
     SELECT	
       job_id,
       job_title,
@@ -38,10 +39,117 @@ Query # 1 : Top-Paying Jobs
           search_location = 'Canada'
     order by salary_year_avg desc
     limit 20
+```
 
 In Canada, the top positions for Data Analysts exhibit a significant salary range, spanning from 100k to 175k. The majority of these coveted roles are at the senior, lead, or managerial levels. <br>
+<br>
 <img src="https://github.com/jcgavino/SQL_Project/blob/main/PowerBi/Query1_Table.png" width="400" height="400">
+<br>
 
+### Query # 2 : Top Skills
+
+```sql
+    with top_paying_jobs as (
+        SELECT	
+            job_id,
+            job_title,
+            salary_year_avg,
+            name as company_name
+        FROM
+            job_postings_fact as jpf
+        LEFT JOIN company_dim as cd on jpf.company_id=cd.company_id
+        where salary_year_avg IS NOT NULL and 
+            job_title_short like 'Data Analyst' and
+            search_location like 'Canada'
+        order by salary_year_avg desc
+        limit 20
+    )
+    select top_paying_jobs.*,
+            skills
+    from top_paying_jobs
+    inner join skills_job_dim on top_paying_jobs.job_id=skills_job_dim.job_id
+    inner join skills_dim on skills_job_dim.skill_id=skills_dim.skill_id
+    order by salary_year_avg desc;
+```
+
+The skills highlighted in the top job postings include SQL, Python, Tableau, SAS, and Excel. Once more, SQL stands out as a fundamental skill essential for data analysis. This is followed by Python for programming and Tableau for visualization. <br>
+<br>
+<img src="https://github.com/jcgavino/SQL_Project/blob/main/PowerBi/Query2_NeededSkills.png">
+<br>
+
+### Query # 3 : Top Skills
+
+```sql
+      SELECT 
+          skills,
+          COUNT(skills_job_dim.job_id) AS demand_count
+      FROM job_postings_fact
+      INNER JOIN skills_job_dim ON job_postings_fact.job_id = skills_job_dim.job_id
+      INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
+      WHERE
+          job_title_short = 'Data Analyst' 
+          AND search_location = 'Canada' 
+      GROUP BY
+          skills
+      ORDER BY
+          demand_count DESC
+      LIMIT 5
+```
+On a general note, SQL, Excel, Python, Tableau, and PowerBI tops the list of skills for data analyst jobs in Canada. <br>
+<br>
+<img src="https://github.com/jcgavino/SQL_Project/blob/main/PowerBi/Query3_DemandSkills.png">
+<br>
+
+### Query # 4 : Top Paying Skills
+```sql
+    SELECT 
+        skills,
+        ROUND(AVG(salary_year_avg), 0) AS avg_salary
+    FROM job_postings_fact
+    INNER JOIN skills_job_dim ON job_postings_fact.job_id = skills_job_dim.job_id
+    INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
+    WHERE
+        job_title_short = 'Data Analyst'
+        AND salary_year_avg IS NOT NULL
+        AND search_location = 'Canada' 
+    GROUP BY
+        skills
+    ORDER BY
+        avg_salary DESC
+    LIMIT 25
+```
+Skills in data visualization and BI tools such as Looker and Tableau, along with expertise in data warehousing technologies like Snowflake and Redshift, are among the highest-paying in the dataset, with average salaries ranging from $95,315 to $130,250. Cloud platform proficiency in AWS, GCP, and Azure also commands competitive salaries, averaging around $105,000. Meanwhile, expertise in programming languages like TypeScript and Python, as well as statistical analysis tools like SAS and R, remains valuable, with average salaries ranging from $83,875 to $108,416. <br>
+<br>
+<img src="https://github.com/jcgavino/SQL_Project/blob/main/PowerBi/Query4_Top_Paying_Skills.png">
+<br>
+
+### Query # 5 : Optimal Skills
+```sql
+    SELECT 
+      skills_dim.skill_id,
+      skills_dim.skills,
+      COUNT(skills_job_dim.job_id) AS demand_count,
+      ROUND(AVG(job_postings_fact.salary_year_avg), 0) AS avg_salary
+    FROM job_postings_fact
+    INNER JOIN skills_job_dim ON job_postings_fact.job_id = skills_job_dim.job_id
+    INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
+    WHERE
+      job_title_short = 'Data Analyst'
+      AND salary_year_avg IS NOT NULL
+      AND search_location = 'Canada' 
+    GROUP BY
+      skills_dim.skill_id
+    HAVING
+      COUNT(skills_job_dim.job_id) > 10
+    ORDER BY
+      avg_salary DESC,
+      demand_count DESC
+    LIMIT 25;
+```
+To prioritize skills with both high demand and high salary, we should emphasize proficiency in SQL and Python. <br>
+<br>
+<img src="https://github.com/jcgavino/SQL_Project/blob/main/PowerBi/Query5_Optimal_Skills.png">
+<br>
 
 ## Learnings
 ## Conclusion
