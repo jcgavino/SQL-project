@@ -151,5 +151,29 @@ To prioritize skills with both high demand and high salary, we should emphasize 
 <img src="https://github.com/jcgavino/SQL_Project/blob/main/PowerBi/Query5_Optimal_Skills.png">
 <br>
 
+### Other # 1 : Job Location
+Data-related job opportunities in Canada are primarily concentrated in Toronto, with 3484 postings. Additionally, locations listed as Canada and Anywhere likely denote remote positions, accounting for approximately 7300 listings collectively. Following Toronto, Vancouver and Montreal emerge as the next prominent areas, boasting 788 and 667 job postings respectively. <br>
+<br>
+<img src="https://github.com/jcgavino/SQL_Project/blob/main/PowerBi/Others1_Data_Job_Location.png">
+<br>
+
+### Other # 2 : Job Title Salary
+Entry-level positions such as Business Analysts and Data Analysts offer salaries around $90k, while Machine Learning Engineers earn the highest salary at $148k. Senior roles including Senior Data Scientists and Analysts, Software and Cloud Engineers, and Data Engineers command higher salaries, averaging around $120k. <br>
+<br>
+<img src="https://github.com/jcgavino/SQL_Project/blob/main/PowerBi/Others1_Data_Job_Salary.png">
+<br>
+
 ## Learnings
+Exploring the trends and dynamics of the Canadian data industry was enlightening and provided valuable insights into potential career paths. Throughout this journey, I focused on honing essential skills crucial for securing a role in data analytics. These included:
+
+1. Advancing proficiency in SQL by practicing more complex queries and engaging in real-life data analysis scenarios.
+2. Gaining foundational knowledge in PostgreSQL to understand the fundamentals of database management.
+3. Becoming skilled in Git and GitHub to establish and manage my own repository, facilitating seamless collaboration and sharing of projects.
+4. Transitioning from static data files to dynamic analysis using PowerBI, enabling direct connections to databases for more insightful and interactive reporting.
+
 ## Conclusion
+Some key takeaways:
+- Although data-related jobs offer lucrative salaries, acquiring the necessary skills is crucial to enter the industry.
+- Prioritize mastering top-rated skill sets like SQL, a visualization tool such as Tableau or PowerBI, spreadsheet software like Google Sheets or Excel, and a programming language like R or Python.
+- To increase earning potential, consider expanding expertise in database and cloud-focused tools.
+- Data Scientists and Machine Learning Engineers command the highest salaries among data-related positions.
