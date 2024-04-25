@@ -1,5 +1,6 @@
 # SQL_Project_Job_Prospects
-I stumbled upon a dataset of job postings, collected and shared by Luke Barousse. It encompasses diverse job opportunities ranging from analysts to engineers. This specific version is geared towards extracting insights from the Canadian job market and honing my SQL query and database management abilities.
+I stumbled upon a dataset of job postings, collected and shared by Luke Barousse. It encompasses diverse job opportunities ranging from analysts to engineers. This specific version is geared towards extracting insights from the Canadian job market and honing my SQL query and database management abilities. You can find more information about the dataset used in this project in the repository by @[lukebarousse](https://github.com/lukebarousse). A big shoutout to Luke and Kelly Adams for this learning opportunity!
+
 
 ## Introduction
 With this dataset, my aim was to explore the salary ranges, required skills, geographical distribution, and job availability within the field of data-related positions across the country.
