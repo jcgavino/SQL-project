@@ -39,6 +39,9 @@ Query # 1 : Top-Paying Jobs
     order by salary_year_avg desc
     limit 20
 
+In Canada, the top positions for Data Analysts exhibit a significant salary range, spanning from 100k to 175k. The majority of these coveted roles are at the senior, lead, or managerial levels. <br>
+<img src="https://github.com/jcgavino/SQL_Project/blob/main/PowerBi/Query1_Table.png" width="400" height="400">
+
 
 ## Learnings
 ## Conclusion
